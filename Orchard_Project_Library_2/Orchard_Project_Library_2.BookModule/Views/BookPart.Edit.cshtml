@@ -1,0 +1,31 @@
+﻿@model Orchard_Project_Library_2.BookModule.ViewModels.BookPartViewModel
+
+<fieldset class="form-group" asp-validation-class-for="Author">
+    <label asp-for="Author">@T["Author"] <span asp-validation-for="Author"></span></label>
+    <input asp-for="Author" class="form-control" />
+    <span class="hint">@T["Book's author"]</span>
+</fieldset>
+
+<fieldset class="form-group" asp-validation-class-for="Title">
+    <label asp-for="Title">@T["Title"] <span asp-validation-for="Title"></span></label>
+    <input asp-for="Title" class="form-control" />
+    <span class="hint">@T["Book's title"]</span>
+</fieldset>
+
+<fieldset class="form-group" asp-validation-class-for="PublicationYear">
+    <label asp-for="PublicationYear">@T["Publication Year"] <span asp-validation-for="PublicationYear"></span></label>
+    <input asp-for="PublicationYear" class="form-control" />
+    <span class="hint">@T["Book's publication year"]</span>
+</fieldset>
+
+<fieldset class="form-group" asp-validation-class-for="ISBN">
+    <label asp-for="ISBN">@T["ISBN"] <span asp-validation-for="ISBN"></span></label>
+    <input asp-for="ISBN" class="form-control" />
+    <span class="hint">@T["Book's ISBN number"]</span>
+</fieldset>
+
+<fieldset class="form-group" asp-validation-class-for="Description">
+    <label asp-for="Description">@T["Description"] <span asp-validation-for="Description"></span></label>
+    <input asp-for="Description" class="form-control" />
+    <span class="hint">@T["Book's description"]</span>
+</fieldset>

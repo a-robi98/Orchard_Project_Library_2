@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="@Orchard.CultureName()">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@RenderTitleSegments(Site.SiteName, "before")</title>
+    <style asp-src="~/Orchard_Project_Library_2.MainTheme/site.css"></style>
+    <script asp-src="~/Orchard_Project_Library_2.MainTheme/site.js"></script>
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <resources type="Meta" />
+    <resources type="HeadLink" />
+    <resources type="Stylesheet" />
+    <resources type="HeadScript" />
+    @await RenderSectionAsync("HeadMeta", required: false)
+</head>
+<body dir="@Orchard.CultureDir()">
+    @*dir="@Orchard.CultureDir()"*@
+    @*<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <shape type="Branding" />
+            
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbar">
+                <menu alias="alias:main-menu" cache-id="main-menu" cache-fixed-duration="00:05:00" cache-tag="alias:main-menu" />
+                <shape type="LoginMenu" />
+            </div>
+        </div>
+    </nav>*@
+    <nav class="navbar navbar-expand-lg text-uppercase fixed-top" id="mainNav">
+        <div class="container">
+            
+            <a class="navbar-brand" href="#page-top">@Site.SiteName</a>
+            <button class="navbar-toggler text-uppercase font-weight-bold text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbar">
+            @*<div class="collapse navbar-collapse" id="navbarResponsive">*@
+               @* <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#bookloaning">Book loaning</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a></li>*@
+                <menu alias="alias:main-menu" cache-id="main-menu" cache-fixed-duration="00:05:00" cache-tag="alias:main-menu"  />
+               
+
+
+                   @* </ul>*@
+                <shape type="LoginMenu" />
+            </div>
+        </div>
+    </nav>
+    <header class="masthead bg-dark text-white text-center">
+        <div class="container d-flex align-items-center flex-column">
+            <!-- Masthead Heading-->
+            <h1 class="masthead-heading text-uppercase mb-0">University Library</h1>
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <p class="masthead-subheading font-weight-light mb-0">The place where you find knowledge</p>
+        </div>
+    </header>
+   @*@await RenderSectionAsync("Header", required: false)*@
+    <main class="container">
+      @await RenderSectionAsync("Messages", required: false)
+        @*<shape type="AdhocShape" message="@T["This is a parameter!"]"></shape>*@
+
+        @*@await DisplayAsync(await New.AdhocShape(Message: T["This is a paramater."]))*@
+        @await RenderBodyAsync()
+    </main>
+    
+    <footer class="footer text-center">
+        <div class="container">
+            <div class="row">
+                <!-- Footer Location-->
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">Location</h4>
+                    <p class="lead mb-0">
+                        1077 Budapest
+                        <br />
+                        Rákóczi út 32.
+                    </p>
+                </div>
+                <!-- Footer Social Icons-->
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">Around the Web</h4>
+                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-dribbble"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Copyright Section-->
+    <div class="copyright py-4 text-center text-white">
+        <div class="container"><small>Copyright &copy; Your Website 2023</small></div>
+    </div>
+</body>
+</html>
