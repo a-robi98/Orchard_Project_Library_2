@@ -3,9 +3,12 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.DependencyInjection;
+using Orchard_Project_Library_2.BookModule.Drivers;
+//using Orchard_Project_Library_2.BookModule.Filters;
 using Orchard_Project_Library_2.BookModule.Migrations;
 using Orchard_Project_Library_2.BookModule.Models;
 using OrchardCore.ContentManagement;
+using OrchardCore.ContentManagement.Display.ContentDisplay;
 using OrchardCore.Data.Migration;
 using System;
 using System.Collections.Generic;
@@ -15,13 +18,13 @@ using System.Threading.Tasks;
 
 namespace Orchard_Project_Library_2.BookModule
 {
-    public class Startup : StartupBase
+    public class Startup
     {
-        public override void ConfigureServices(IServiceCollection services)
+        public  void ConfigureServices(IServiceCollection services)
         {
             services
-                .AddContentPart<BookPart>();
-            //    .UseDisplayDriver<PersonPartDisplayDriver>()
+                .AddContentPart<BookPart>()
+                .UseDisplayDriver<BookPartDisplayDriver>();
             //    .AddHandler<PersonPartHandler>();
             services.AddScoped<IDataMigration, BookMigrations>();
             //services.AddSingleton<IIndexProvider, PersonPartIndexProvider>();
@@ -37,16 +40,14 @@ namespace Orchard_Project_Library_2.BookModule
             //services.AddScoped<INavigationProvider, AdminMenu>();
 
         }
-        public override void Configure(IApplicationBuilder app)
+        public  void Configure(IApplicationBuilder app, IEndpointRouteBuilder routes)
         {
-            //routes.MapAreaControllerRoute(
-            //    name: "Home",
-            //    areaName: "DojoCourse.Module",
-            //    pattern: "Home/Index",
-            //    defaults: new { controller = "Home", action = "Index" }
-            //);
+            routes.MapAreaControllerRoute(
+                name: "Home",
+                areaName: "Orchard_Project_Library_2.BookModule",
+                pattern: "Home/Index",
+                defaults: new { controller = "Home", action = "Index" }
+            );
         }
-
-       
     }
 }

@@ -36,5 +36,35 @@ namespace Orchard_Project_Library_2.BookModule.Migrations
 
             return 1;
         }
+
+        public int UpdateFrom1() 
+        {
+            _contentDefinitionManager.AlterTypeDefinition("BookListPage", type => type
+                .Creatable()
+                .Listable()
+                .WithPart(nameof(BookPart))
+                );
+
+
+            return 2;
+        }
+
+        //public int UpdateFrom2()
+        //{
+        //    _contentDefinitionManager.AlterTypeDefinition("BookListPageWidget", type => type
+        //        .Creatable()
+        //        .Listable()
+        //        .WithWield(Widge)
+        //        );
+
+        //    _contentDefinitionManager.AlterTypeDefinition("BookWidget", type => type
+        //        .Creatable()
+        //        .Listable()
+        //        .WithPart(nameof(BookPart))
+        //        );
+
+
+        //    return 3;
+        //}
     }
 }

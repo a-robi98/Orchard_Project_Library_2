@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orchard_Project_Library_2_W
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orchard_Project_Library_2.BookModule", "Orchard_Project_Library_2.BookModule\Orchard_Project_Library_2.BookModule.csproj", "{A55DD101-8FFC-40FC-BA2D-8DE52C0DBA9C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orchard_Project_Library_2.MainTheme", "Orchard_Project_Library_2.MainTheme\Orchard_Project_Library_2.MainTheme.csproj", "{B79ECDD7-BE1B-4EA3-94B4-04EB34CACEED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,12 +27,17 @@ Global
 		{A55DD101-8FFC-40FC-BA2D-8DE52C0DBA9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A55DD101-8FFC-40FC-BA2D-8DE52C0DBA9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A55DD101-8FFC-40FC-BA2D-8DE52C0DBA9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B79ECDD7-BE1B-4EA3-94B4-04EB34CACEED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B79ECDD7-BE1B-4EA3-94B4-04EB34CACEED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B79ECDD7-BE1B-4EA3-94B4-04EB34CACEED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B79ECDD7-BE1B-4EA3-94B4-04EB34CACEED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{A55DD101-8FFC-40FC-BA2D-8DE52C0DBA9C} = {D2BA205D-39E2-4AAF-83CA-3AC2E964A6EF}
+		{B79ECDD7-BE1B-4EA3-94B4-04EB34CACEED} = {3DC636CD-D487-4F59-9C9E-0BFBF9A51FC6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1E704B9E-F814-4AA4-99E5-8A26A7DAB0EF}
