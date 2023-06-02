@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Orchard_Project_Library_2
+namespace Orchard_Project_Library_2_Web_App
 {
     public class Program
     {

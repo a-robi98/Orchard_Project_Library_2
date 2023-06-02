@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33712.159
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orchard_Project_Library_2", "Orchard_Project_Library_2\Orchard_Project_Library_2.csproj", "{F4679577-BEF5-455F-B994-7D3BF5772097}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{D2BA205D-39E2-4AAF-83CA-3AC2E964A6EF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Themes", "Themes", "{3DC636CD-D487-4F59-9C9E-0BFBF9A51FC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orchard_Project_Library_2_Web_App", "Orchard_Project_Library_2_Web_App\Orchard_Project_Library_2_Web_App.csproj", "{03E2FF94-F9BC-4CD5-8916-28EE52C7921D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orchard_Project_Library_2.BookModule", "Orchard_Project_Library_2.BookModule\Orchard_Project_Library_2.BookModule.csproj", "{A55DD101-8FFC-40FC-BA2D-8DE52C0DBA9C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,13 +17,20 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F4679577-BEF5-455F-B994-7D3BF5772097}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F4679577-BEF5-455F-B994-7D3BF5772097}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F4679577-BEF5-455F-B994-7D3BF5772097}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F4679577-BEF5-455F-B994-7D3BF5772097}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03E2FF94-F9BC-4CD5-8916-28EE52C7921D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03E2FF94-F9BC-4CD5-8916-28EE52C7921D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03E2FF94-F9BC-4CD5-8916-28EE52C7921D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03E2FF94-F9BC-4CD5-8916-28EE52C7921D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A55DD101-8FFC-40FC-BA2D-8DE52C0DBA9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A55DD101-8FFC-40FC-BA2D-8DE52C0DBA9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A55DD101-8FFC-40FC-BA2D-8DE52C0DBA9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A55DD101-8FFC-40FC-BA2D-8DE52C0DBA9C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A55DD101-8FFC-40FC-BA2D-8DE52C0DBA9C} = {D2BA205D-39E2-4AAF-83CA-3AC2E964A6EF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1E704B9E-F814-4AA4-99E5-8A26A7DAB0EF}
